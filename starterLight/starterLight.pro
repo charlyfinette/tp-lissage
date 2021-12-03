@@ -29,12 +29,15 @@ unix:!macx {
     LIBS += -L$$PWD/../OpenMesh/liblinux/ -lOpenMeshCore
 
     INCLUDEPATH += $$PWD/../OpenMesh/inc/
+    #INCLUDEPATH += $$PWD/../Eigen/
+    QMAKE_CXXFLAGS += -isystem $$PWD/../Eigen/
     DEPENDPATH += $$PWD/../OpenMesh/inc/
     DEPENDPATH += $$PWD/../OpenMesh/liblinux/
 }
 
 macx: {
     INCLUDEPATH += $$PWD/../OpenMesh/inc/
+    INCLUDEPATH += $$PWD/../Eigen/
     LIBS += -L$$PWD/../OpenMesh/libosx/ -lOpenMeshCore -lOpenMeshTools
 }
 

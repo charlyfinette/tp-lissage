@@ -33,7 +33,7 @@ public:
     QVBoxLayout *verticalLayout;
     QPushButton *pushButton_chargement;
     QPushButton *pushButton_lissage;
-    QPushButton *pushButton_enregistrer;
+    QPushButton *pushButton_lissage_uniforme;
     QSpacerItem *verticalSpacer;
     MeshViewerWidget *displayWidget;
     QMenuBar *menuBar;
@@ -75,10 +75,10 @@ public:
 
         verticalLayout->addWidget(pushButton_lissage);
 
-        pushButton_enregistrer = new QPushButton(widget_2);
-        pushButton_enregistrer->setObjectName(QString::fromUtf8("pushButton_enregistrer"));
+        pushButton_lissage_uniforme = new QPushButton(widget_2);
+        pushButton_lissage_uniforme->setObjectName(QString::fromUtf8("pushButton_lissage_uniforme"));
 
-        verticalLayout->addWidget(pushButton_enregistrer);
+        verticalLayout->addWidget(pushButton_lissage_uniforme);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -114,7 +114,7 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         pushButton_chargement->setText(QApplication::translate("MainWindow", "Charger maillage", nullptr));
         pushButton_lissage->setText(QApplication::translate("MainWindow", "Lissage", nullptr));
-        pushButton_enregistrer->setText(QApplication::translate("MainWindow", "Enregistrer", nullptr));
+        pushButton_lissage_uniforme->setText(QApplication::translate("MainWindow", "Lissage uniforme", nullptr));
     } // retranslateUi
 
 };

@@ -7,6 +7,8 @@
 #include <OpenMesh/Core/Mesh/TriMesh_ArrayKernelT.hh>
 #include <OpenMesh/Core/IO/writer/PLYWriter.hh>
 
+#include <Eigen/Core>
+
 namespace Ui {
 class MainWindow;
 }
@@ -41,18 +43,30 @@ public:
 
     void displayMesh(MyMesh *_mesh, bool isTemperatureMap = false, float mapRange = -1);
     void resetAllColorsAndThickness(MyMesh* _mesh);
+
     float A(MyMesh::VertexHandle vh);
+    float A_alternatif(MyMesh::VertexHandle vh);
+
+    float poids_cotangenciel_voisin(MyMesh::VertexHandle vh, MyMesh::VertexHandle vh_neigh);
+    float poids_cotangenciel_voisins(MyMesh::VertexHandle vh);
+
+
     MyMesh::Point delta(MyMesh::VertexHandle vh);
     MyMesh::Point deltaUniforme(MyMesh::VertexHandle vh);
+
+    Eigen::MatrixXd Matrix_D();
+    Eigen::MatrixXd Matrix_M();
+
+    void FlouDeDiffusion(float h, float lambda);
+
     void lissage();
-    std::vector<std::vector<double>> Matrix_D();
-    std::vector<std::vector<double>> Matrix_M();
 
 
 
 private slots:
     void on_pushButton_chargement_clicked();
     void on_pushButton_lissage_clicked();
+    void on_pushButton_lissage_uniforme_clicked();
     void on_pushButton_enregistrer_clicked();
 
 private:

@@ -66,9 +66,9 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_enregistrer">
+        <widget class="QPushButton" name="pushButton_lissage_uniforme">
          <property name="text">
-          <string>Enregistrer</string>
+          <string>Lissage uniforme</string>
          </property>
         </widget>
        </item>
