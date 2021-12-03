@@ -14,8 +14,8 @@ L'essentiel du code se trouve en bas du fichier "mainwindow.cpp".
 MyMesh::Point MainWindow::delta(MyMesh::VertexHandle vh)
 ```
 Je ne vais pas détaillé plus précisément cette implémentation étant donné que:
-- je vous l'avais déjà montré durant le TP.
-- tout est réimplémenté dans la partie 2 de manière plus modulaire et plus claire
+- Je vous l'avais déjà montré durant le TP.
+- Tout est réimplémenté dans l'exercice 2 de manière plus modulaire et donc plus claire.
 
 ``` c++
 // Opérateur uniforme
