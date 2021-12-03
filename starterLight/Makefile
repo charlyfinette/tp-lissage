@@ -16,7 +16,7 @@ CC            = gcc
 CXX           = g++
 DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-CXXFLAGS      = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
+CXXFLAGS      = -pipe -isystem /home/charly/Documents/modeles-geom/TP_LissageDeMaillage/tp-lissage/starterLight/../Eigen/ -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 INCPATH       = -I. -I../OpenMesh/inc -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtOpenGL -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
 QMAKE         = /usr/lib/qt5/bin/qmake
 DEL_FILE      = rm -f
@@ -37,10 +37,10 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = starterLight1.0.0
-DISTDIR = /home/charly/Documents/modeles-geom/TP_LissageDeMaillage/mod/starterLight/.tmp/starterLight1.0.0
+DISTDIR = /home/charly/Documents/modeles-geom/TP_LissageDeMaillage/tp-lissage/starterLight/.tmp/starterLight1.0.0
 LINK          = g++
 LFLAGS        = 
-LIBS          = $(SUBLIBS) -lglut -lGLU -L/home/charly/Documents/modeles-geom/TP_LissageDeMaillage/mod/starterLight/../OpenMesh/liblinux/ -lOpenMeshCore /usr/lib/x86_64-linux-gnu/libQt5OpenGL.so /usr/lib/x86_64-linux-gnu/libQt5Widgets.so /usr/lib/x86_64-linux-gnu/libQt5Gui.so /usr/lib/x86_64-linux-gnu/libQt5Core.so /usr/lib/x86_64-linux-gnu/libGL.so -lpthread   
+LIBS          = $(SUBLIBS) -lglut -lGLU -L/home/charly/Documents/modeles-geom/TP_LissageDeMaillage/tp-lissage/starterLight/../OpenMesh/liblinux/ -lOpenMeshCore /usr/lib/x86_64-linux-gnu/libQt5OpenGL.so /usr/lib/x86_64-linux-gnu/libQt5Widgets.so /usr/lib/x86_64-linux-gnu/libQt5Gui.so /usr/lib/x86_64-linux-gnu/libQt5Core.so /usr/lib/x86_64-linux-gnu/libGL.so -lpthread   
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -351,7 +351,7 @@ compiler_moc_predefs_make_all: moc_predefs.h
 compiler_moc_predefs_clean:
 	-$(DEL_FILE) moc_predefs.h
 moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
-	g++ -pipe -g -Wall -W -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
+	g++ -pipe -isystem /home/charly/Documents/modeles-geom/TP_LissageDeMaillage/tp-lissage/starterLight/../Eigen/ -g -Wall -W -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
 compiler_moc_header_make_all: moc_mainwindow.cpp moc_meshviewerwidget.cpp
 compiler_moc_header_clean:
@@ -432,7 +432,7 @@ moc_mainwindow.cpp: mainwindow.h \
 		../OpenMesh/inc/OpenMesh/Core/Mesh/TriMeshT.cc \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/charly/Documents/modeles-geom/TP_LissageDeMaillage/mod/starterLight/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/charly/Documents/modeles-geom/TP_LissageDeMaillage/mod/starterLight -I/home/charly/Documents/modeles-geom/TP_LissageDeMaillage/mod/OpenMesh/inc -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtOpenGL -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/charly/Documents/modeles-geom/TP_LissageDeMaillage/tp-lissage/starterLight/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/charly/Documents/modeles-geom/TP_LissageDeMaillage/tp-lissage/starterLight -I/home/charly/Documents/modeles-geom/TP_LissageDeMaillage/tp-lissage/OpenMesh/inc -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtOpenGL -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
 
 moc_meshviewerwidget.cpp: meshviewerwidget.h \
 		../OpenMesh/inc/OpenMesh/Core/Geometry/VectorT.hh \
@@ -443,7 +443,7 @@ moc_meshviewerwidget.cpp: meshviewerwidget.h \
 		../OpenMesh/inc/OpenMesh/Core/Geometry/VectorT_inc.hh \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/charly/Documents/modeles-geom/TP_LissageDeMaillage/mod/starterLight/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/charly/Documents/modeles-geom/TP_LissageDeMaillage/mod/starterLight -I/home/charly/Documents/modeles-geom/TP_LissageDeMaillage/mod/OpenMesh/inc -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtOpenGL -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include meshviewerwidget.h -o moc_meshviewerwidget.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/charly/Documents/modeles-geom/TP_LissageDeMaillage/tp-lissage/starterLight/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/charly/Documents/modeles-geom/TP_LissageDeMaillage/tp-lissage/starterLight -I/home/charly/Documents/modeles-geom/TP_LissageDeMaillage/tp-lissage/OpenMesh/inc -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtOpenGL -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include meshviewerwidget.h -o moc_meshviewerwidget.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
