@@ -92,7 +92,7 @@ float MainWindow::A_alternatif(MyMesh::VertexHandle vh)
 ``` 
 
 J'ai recodé la partie suivante en utilisant la structure de halfedge, central à OpenMesh :
-```
+``` c++
 // Etant donné un sommet v, et d'un voisin v_neigh de v, retourne la valeur du coefficient cotangenciel associé
 float MainWindow::poids_cotangenciel_voisin(MyMesh::VertexHandle vh, MyMesh::VertexHandle vh_neigh)
 {
@@ -162,7 +162,7 @@ Eigen::MatrixXd MainWindow::Matrix_D()
 }
 ```
 
-Implémentation de la matrice M
+Implémentation de la matrice M.
 ``` c++
 Eigen::MatrixXd MainWindow::Matrix_M()
 {
