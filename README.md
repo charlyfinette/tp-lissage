@@ -37,7 +37,7 @@ void MainWindow::lissage()
     }
 }
 ```
-Cette fonction est accesible par le bouton " lissage uniforme " de mon programme. Si vous modifier le code pour voir le fonctionnement de mon opérateur de laplace Beltrami, il faudra quand même utiliser le bouton "lissage uniforme".
+Cette fonction est accesible par le bouton " lissage uniforme " de mon programme. Si vous modifier le code pour voir le fonctionnement de mon opérateur de Laplace-Beltrami, il faudra quand même utiliser le bouton "lissage uniforme".
 J'ai choisi de donner un bouton à l'opérateur uniforme parce qu'il fonctionne mieux.
 
 ## Implémentation des matrices de Laplace Beltrami
