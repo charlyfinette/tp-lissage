@@ -8,7 +8,8 @@ L'essentiel du code se trouve en bas du fichier "mainwindow.cpp".
 
 ``` c++
 // Opérateur de Laplace-Beltrami
-// Etant donné un sommet v, renvoit le vecteur  res avec lequel déplacer le sommet v pour effectuer un lissage à l'aide de l'opérateur de Laplace Beltrami
+// Etant donné un sommet v, renvoit le vecteur res que l'on applique au sommet v 
+// pour effectuer un lissage à l'aide de l'opérateur de Laplace Beltrami
 
 MyMesh::Point MainWindow::delta(MyMesh::VertexHandle vh)
 ```
