@@ -2,6 +2,12 @@
 
 Charly Finette
 
+## Outils 
+
+## Installation 
+
+## Problématique
+
 L'essentiel du code se trouve en bas du fichier "mainwindow.cpp".
 
 ## Implémentation de l'opérateur de Laplace-Beltrami
